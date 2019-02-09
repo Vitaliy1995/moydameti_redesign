@@ -23,16 +23,27 @@ body
 	font-weight: bold
 
 .auth-button
+	display: inline-block
 	width: 180px
 	height: 35px
 	font-size: 14px
+	color: #000
+	text-decoration: none
+	line-height: 35px
 	font-weight: 500
 	border: 1px solid #000
 	border-radius: 15px
 	background-color: rgba(#fff, .7)
 	transition: background-color .25s ease
 	&:hover
+		color: #000
+		text-decoration: none
 		background-color: rgba(#fff, 1)
+
+.button-accent
+	background-color: rgba($accent, .7)
+	&:hover
+		background-color: rgba($accent, 1)
 
 // Шапка сайта
 .header
@@ -302,6 +313,50 @@ body
 				&:last-child
 					position: absolute
 					right: 20px
+
+.registration
+	position: relative
+	text-align: center
+	max-width: 992px
+	padding-bottom: 20px
+	img
+		margin-top: 20px
+	&-header
+		font-size: 18px
+	&-input
+		margin-bottom: 10px
+		&:last-child
+			margin-bottom: 0
+	label, input, select
+		display: inline-block
+		width: 49%
+		height: 35px
+		line-height: 35px
+		border: 1px solid #000
+	label
+		border-top-left-radius: 5px
+		border-bottom-left-radius: 5px
+		background-color: $accent
+	input, select
+		position: relative
+		top: -1px
+		border-top-right-radius: 5px
+		border-bottom-right-radius: 5px
+	input
+		padding-left: 5px
+	&-text
+		text-align: left
+		padding-left: 6px
+		a
+			color: #000
+			text-decoration: underline
+			transition: color .25s ease
+			&:hover
+				color: #333333
+	a.auth-button
+		position: absolute
+		left: 0
+
 
 // footer сайта
 .footer

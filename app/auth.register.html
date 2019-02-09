@@ -74,7 +74,58 @@
 
 <section class="main">
     <div class="container">
-
+        <div class="registration">
+            <img src="img/logo/logo_sm.png" alt="МОЙ ДА МЕТИ">
+            <p class="registration-header">Заполните форму</p>
+            <form method="post" class="registration-form">
+                <div class="registration-input">
+                    <label for="name">Имя*</label>
+                    <input type="text" id="name" placeholder="Имя" required>
+                </div>
+                <div class="registration-input">
+                    <label for="phone">Номер телефона*</label>
+                    <input type="text" id="phone" placeholder="Номер телефона" required>
+                </div>
+                <div class="registration-input">
+                    <label for="city-input">Город*</label>
+                    <select name="city" id="city-input">
+                        <option disabled>Выберите город</option>
+                        <option>Абакан</option>
+                        <option>Москва</option>
+                        <option>Санкт-Петербург</option>
+                        <option>Санкт-Петербург</option>
+                        <option>Санкт-Петербург</option>
+                        <option>Санкт-Петербург</option>
+                        <option>Санкт-Петербург</option>
+                        <option>Санкт-Петербург</option>
+                        <option>Санкт-Петербург</option>
+                        <option>Санкт-Петербург</option>
+                        <option>Санкт-Петербург</option>
+                        <option>Санкт-Петербург</option>
+                        <option>Санкт-Петербург</option>
+                    </select>
+                </div>
+                <div class="registration-input">
+                    <label for="email">E-mail*</label>
+                    <input type="email" id="email" placeholder="E-mail" required>
+                </div>
+                <div class="registration-input">
+                    <label for="password">Пароль*</label>
+                    <input type="password" id="password" placeholder="Пароль" required>
+                </div>
+                <div class="registration-input">
+                    <label for="password-check">Пароль повторно*</label>
+                    <input type="password" id="password-check" placeholder="Пароль повторно" required>
+                </div>
+                <p class="registration-text">
+                    * - поля, обязательные для заполнения<br>
+                    Нажимая кнопку «Зарегистрировать», я подтверждаю своё согласие с <a href="">политикой конфиденциальности</a> и условиями
+                    <a href="">пользовательского соглашения</a> данного сайта
+                </p>
+                <a class="auth-button" href="">Порядок заполнения</a>
+                <button class="auth-button button-accent">Зарегистрировать</button>
+            </form>
+        </div>
     </div>
 </section>
 
