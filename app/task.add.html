@@ -74,7 +74,121 @@
 
 <section class="main">
     <div class="container">
-
+        <div class="accommodation">
+            <img src="img/logo/logo_sm.png" alt="МОЙ ДА МЕТИ">
+            <p class="accommodation-header">Заполните форму</p>
+            <form method="post">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="accommodation-input row">
+                            <label class="col-sm-6" for="contact-face">Контактное лицо*</label>
+                            <input class="col-sm-6" id="contact-face" type="text" placeholder="Контактное лицо" required>
+                        </div>
+                        <div class="accommodation-input row">
+                            <label class="col-sm-6" for="vacancy-input">Вакансия*</label>
+                            <select class="col-sm-6" name="vacancy" id="vacancy-input" required>
+                                <option disabled>Выберите вакансию</option>
+                                <option>Дворник</option>
+                                <option>Уборщица</option>
+                            </select>
+                        </div>
+                        <div class="accommodation-input row">
+                            <label class="col-sm-6" for="city-input">Город*</label>
+                            <select class="col-sm-6" name="city" id="city-input" required>
+                                <option disabled>Выберите город</option>
+                                <option>Абакан</option>
+                                <option>Москва</option>
+                                <option>Санкт-Петербург</option>
+                                <option>Санкт-Петербург</option>
+                                <option>Санкт-Петербург</option>
+                                <option>Санкт-Петербург</option>
+                                <option>Санкт-Петербург</option>
+                                <option>Санкт-Петербург</option>
+                                <option>Санкт-Петербург</option>
+                                <option>Санкт-Петербург</option>
+                                <option>Санкт-Петербург</option>
+                                <option>Санкт-Петербург</option>
+                                <option>Санкт-Петербург</option>
+                            </select>
+                        </div>
+                        <div class="accommodation-input row">
+                            <label class="col-sm-6" for="square">Площадь (кв.м.)*</label>
+                            <input class="col-sm-6" id="square" type="number" placeholder="Площадь (кв.м.)" required>
+                        </div>
+                        <div class="accommodation-input row">
+                            <label class="col-sm-6" for="metro-station">Станция метро</label>
+                            <select class="col-sm-6" name="metro" id="metro-station">
+                                <option disabled>Выберите станцию метро</option>
+                                <option>Абакан</option>
+                                <option>Москва</option>
+                                <option>Санкт-Петербург</option>
+                                <option>Санкт-Петербург</option>
+                                <option>Санкт-Петербург</option>
+                                <option>Санкт-Петербург</option>
+                                <option>Санкт-Петербург</option>
+                                <option>Санкт-Петербург</option>
+                                <option>Санкт-Петербург</option>
+                                <option>Санкт-Петербург</option>
+                                <option>Санкт-Петербург</option>
+                                <option>Санкт-Петербург</option>
+                                <option>Санкт-Петербург</option>
+                            </select>
+                        </div>
+                        <div class="accommodation-input row">
+                            <label class="col-sm-6" for="address">Адрес*</label>
+                            <input class="col-sm-6" id="address" type="text" placeholder="Адрес" required>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="accommodation-input row" id="employment-div">
+                            <label class="col-sm-6" for="employment">Занятость*</label>
+                            <select class="col-sm-6" name="employment" id="employment" required>
+                                <option disabled>Выберите занятость</option>
+                                <option>Постоянная</option>
+                                <option>Разовая</option>
+                            </select>
+                        </div>
+                        <div class="accommodation-input row" id="graph-div">
+                            <label for="graph-work" class="col-sm-6">График (раб./вых.)*</label>
+                            <input id="graph-work" type="text" class="col-sm-6" placeholder="__/__">
+                        </div>
+                        <div class="accommodation-input row" id="date-div">
+                            <label for="date" class="col-sm-6">Дата*</label>
+                            <input id="date" type="date" class="col-sm-6">
+                        </div>
+                        <div class="accommodation-input row">
+                            <label for="work-time-start" class="col-sm-6">Время начала работы*</label>
+                            <input id="work-time-start" type="time" class="col-sm-6" required>
+                        </div>
+                        <div class="accommodation-input row">
+                            <label for="work-time-end" class="col-sm-6">Время окончания работы*</label>
+                            <input id="work-time-end" type="time" class="col-sm-6" required>
+                        </div>
+                        <div class="accommodation-input row">
+                            <label for="phone" class="col-sm-6">Контактный номер*</label>
+                            <input id="phone" type="tel" placeholder="Номер телефона" class="col-sm-6" required>
+                        </div>
+                        <div class="accommodation-input row">
+                            <label for="payment" class="col-sm-6">Оплата (руб.)*</label>
+                            <input id="payment" type="number" min="0" placeholder="Оплата (руб.)" class="col-sm-6" required>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="accommodation-input row">
+                            <img src="img/logo/logo_sm.png" alt="CAPTCHA">
+                            <input id="captcha" name="captcha" type="number" placeholder="Введите цифры">
+                        </div>
+                    </div>
+                    <p class="accommodation-text">
+                        * - поля, обязательные для заполнения<br>
+                        Нажимая кнопку «Разместить вакансию», я подтверждаю своё согласие с <a href="">политикой конфиденциальности</a> и условиями
+                        <a href="">пользовательского соглашения</a> данного сайта
+                    </p>
+                    <a class="auth-button" href="">Порядок заполнения</a>
+                    <button class="auth-button button-accent">Разместить вакансию</button>
+                </div>
+            </form>
+        </div>
     </div>
 </section>
 

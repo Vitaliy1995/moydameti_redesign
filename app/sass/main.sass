@@ -314,13 +314,13 @@ body
 					position: absolute
 					right: 20px
 
-.registration
+// Регистрация, Размещение
+.registration, .accommodation
 	position: relative
 	text-align: center
 	max-width: 992px
-	padding-bottom: 20px
-	img
-		margin-top: 20px
+	padding: 20px 0
+	margin: 0 auto
 	&-header
 		font-size: 18px
 	&-input
@@ -344,6 +344,36 @@ body
 		border-bottom-right-radius: 5px
 	input
 		padding-left: 5px
+	.col-md-6
+		label
+			border-right: none
+		input, select
+			top: 0
+		select
+			padding-left: 2px
+	.col-md-12
+		margin: 20px 0
+		img, input
+			display: inline-block
+			width: 240px
+			height: 40px
+			line-height: 40px
+			border: 1px solid #000
+		input
+			top: 4px
+			left: -4px
+			font-size: 24px
+		img
+			border-right: none
+			border-top-left-radius: 5px
+			border-bottom-left-radius: 5px
+			padding: 5px
+	input::-webkit-outer-spin-button,
+	input::-webkit-inner-spin-button
+		-webkit-appearance: none
+		margin: 0
+	input[type='number']
+		-moz-appearance: textfield
 	&-text
 		text-align: left
 		padding-left: 6px
@@ -356,7 +386,8 @@ body
 	a.auth-button
 		position: absolute
 		left: 0
-
+	#graph-div, #date-div
+		display: none
 
 // footer сайта
 .footer
@@ -396,6 +427,12 @@ body
 				&:before
 					left: -22px
 					content: "\f0e0"
+
+@-moz-document url-prefix()
+	.accommodation
+		.col-md-12
+			input
+				top: 5px
 
 
 @import "media" // Всегда в конце
