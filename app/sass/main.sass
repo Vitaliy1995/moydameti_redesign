@@ -42,6 +42,7 @@ body
 
 .button-accent
 	background-color: rgba($accent, .7)
+	text-align: center
 	&:hover
 		background-color: rgba($accent, 1)
 
@@ -143,13 +144,21 @@ body
 					font-size: 12px
 
 // main сайта
-.main
+.main, .task
 	.content-logo
 		text-align: center
 		margin: 5px 0
 		img
 			width: 900px
-	.main-table
+		&-sm
+			margin-top: 20px
+			text-align: center
+			img
+				width: 235px
+				height: 35px
+			p
+				font-size: 16px
+	.main-table, .task-table
 		margin-bottom: 10px
 		table
 			border-collapse: collapse
@@ -197,7 +206,7 @@ body
 				display: inline-block
 				position: absolute
 				left: 0
-				top: 3px
+				top: 2px
 				width: 20px
 				height: 20px
 				background-color: #2DD700
@@ -209,13 +218,26 @@ body
 				content: ""
 				background-color: #FF0000
 				border: 2px solid #A60000
+	.task-footer
+		position: relative
+		margin-top: 20px
+		padding-bottom: 50px
+		text-align: center
+		.b
+			&-left
+				position: absolute
+				left: 0
+			&-right
+				position: absolute
+				right: 0
+
 
 // Стили авторизаций пользователя
-.auth-main
+.auth-main, .task-main
 	height: inherit
 	.container
 		height: inherit
-	.auth
+	.auth, .task
 		&-center
 			display: flex
 			height: inherit
@@ -234,12 +256,13 @@ body
 			border: 1px solid #000
 			border-radius: 40px
 			box-shadow: 0 0 5px 3px rgba(#C00909, .4)
-		&-logout, &-login, &-password-remember
+		&-logout, &-login, &-password-remember, &-success
 			display: flex
 			height: inherit
 			align-items: center
 			justify-content: center
 			flex-direction: column
+			text-align: center
 			span
 				font-size: 16px
 				font-weight: 600
@@ -360,7 +383,7 @@ body
 			line-height: 40px
 			border: 1px solid #000
 		input
-			top: 4px
+			top: 5px
 			left: -4px
 			font-size: 24px
 		img
@@ -388,6 +411,86 @@ body
 		left: 0
 	#graph-div, #date-div
 		display: none
+
+// user личный кабинет
+.main-user
+	padding: 30px 0
+	text-align: center
+	.user
+		&-logo
+			p
+				font-size: 16px
+		&-body
+			border: 1px solid #000
+			border-radius: 2px
+			padding: 30px
+			background-color: rgba($accent, .1)
+			&-header
+				font-size: 16px
+				padding: 0
+				margin-top: 0
+			.row
+				padding: 0 20px
+		&-input
+			margin-bottom: 10px
+			.input, input, select, .label, label
+				height: 35px
+				line-height: 35px
+				border: 1px solid #000
+			.label, label
+				display: block
+				text-align: left
+				background-color: $accent
+				border-right: none
+				border-top-left-radius: 10px
+				border-bottom-left-radius: 10px
+			.input, input, select
+				display: block
+				border-bottom-right-radius: 10px
+				border-top-right-radius: 10px
+				text-align: left
+				background-color: #fff
+				padding-left: 10px
+	.footer-buttons
+		margin-top: 30px
+		padding-bottom: 30px
+		position: relative
+		a
+			display: inline-block
+			position: absolute
+			&:first-child
+				left: 0
+			&:last-child
+				right: 0
+		.right
+			display: inline-block
+			position: absolute
+			right: 0
+	.payment-block
+		display: flex
+		align-items: center
+		justify-content: center
+		background-color: rgba(#fff, 1)
+		.header-payment
+			font-size: 16px
+			margin-bottom: 40px
+		span, a
+			display: block
+		span
+			font-size: 14px
+			margin-bottom: 5px
+		a
+			background-color: rgba($accent, .7)
+			padding: 5px 15px
+			white-space: nowrap
+			color: #000
+			transition: background-color .3s ease
+			border: 1px solid #000
+			border-radius: 2px
+			&:hover
+				background-color: rgba($accent, 1)
+				text-decoration: none
+
 
 // footer сайта
 .footer
