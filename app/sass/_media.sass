@@ -5,6 +5,10 @@
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
   /**/
+  .header
+    font-size: 14px
+    &-right
+      right: 0
   .main
     .main-table
       .address
@@ -24,7 +28,44 @@
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
-	/**/
+  .header
+    height: 45px
+    &-menu, &-right
+      display: none
+    #ham8
+      display: inline-block
+  .hamburger-menu
+    display: block
+
+  .footer
+    text-align: center
+    height: auto
+    position: relative
+    padding-bottom: 35px
+    &-text, &-contacts
+      display: block
+      position: relative
+      a
+        display: block
+        text-align: center
+        &:first-child:before, &:last-child:before
+          position: relative
+          top: 0
+        &:first-child
+          &:before
+            left: -10px
+            content: "\f095"
+        &:last-child
+          &:before
+            left: -10px
+            content: "\f0e0"
+    &-text
+      position: absolute
+      bottom: -15px
+      left: 0
+      right: 0
+      line-height: 0
+
 
 
 /* Extra Small Devices, Phones */

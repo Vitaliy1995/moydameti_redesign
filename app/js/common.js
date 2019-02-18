@@ -20,7 +20,9 @@ $(function() {
         employmentGetInput($('#employment-div select').val());
     });
 
-
+    $('#ham8').on("click", function () {
+        $(".hamburger-menu").toggleClass('active');
+    });
 
 });
 

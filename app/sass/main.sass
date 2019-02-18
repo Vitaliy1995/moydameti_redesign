@@ -46,8 +46,41 @@ body
 	&:hover
 		background-color: rgba($accent, 1)
 
+// hamburger
+.ham
+	cursor: pointer
+	transition: transform 400ms
+	user-select: none
+.hamRotate.active
+	transform: rotate(45deg)
+.hamRotate180.active
+	transform: rotate(180deg)
+.line
+	fill: none
+	transition: stroke-dasharray 400ms, stroke-dashoffset 400ms
+	stroke: #000
+	stroke-width: 5.5
+	stroke-linecap: round
+.ham8 .top
+	stroke-dasharray: 40 160
+.ham8 .middle
+	stroke-dasharray: 40 142
+	transform-origin: 50%
+	transition: transform 400ms
+.ham8 .bottom
+	stroke-dasharray: 40 85
+	transform-origin: 50%
+	transition: transform 400ms, stroke-dashoffset 400ms
+.ham8.active .top
+	stroke-dashoffset: -64px
+.ham8.active .middle
+	transform: rotate(90deg)
+.ham8.active .bottom
+	stroke-dashoffset: -64px
+
 // Шапка сайта
 .header
+	position: relative
 	background-color: $accent
 	height: 45px
 	font-size: 16px
@@ -142,6 +175,14 @@ body
 				font-size: 18px
 				&:last-child
 					font-size: 12px
+	#ham8
+		display: none
+		position: absolute
+		left: 0
+		top: 0
+		bottom: 0
+		svg
+			background: none
 
 // main сайта
 .main, .task
@@ -530,6 +571,23 @@ body
 				&:before
 					left: -22px
 					content: "\f0e0"
+
+// hamburger
+.hamburger-menu
+	display: none
+	position: absolute
+	top: 45px
+	left: -1000px
+	width: 100%
+	transition: left 1s ease
+	.hamburg-wrapper
+		background-color: $accent
+		text-align: center
+		padding: 10px
+		border: 1px solid #000
+		border-radius: 3px
+.hamburger-menu.active
+	left: 0
 
 @-moz-document url-prefix()
 	.accommodation
