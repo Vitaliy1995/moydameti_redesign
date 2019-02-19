@@ -25,6 +25,11 @@
       position: relative
       height: 45px
 
+  .main, .task
+    .content-logo
+      img
+        width: 100%
+
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
@@ -34,8 +39,14 @@
       display: none
     #ham8
       display: inline-block
+    .mobile-logo
+      display: block
   .hamburger-menu
     display: block
+
+  .main
+    .main-table
+      display: none
 
   .footer
     text-align: center
@@ -70,7 +81,8 @@
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
-	/**/
+  .footer
+    font-size: 12px
 
 
 /* Custom, iPhone Retina */
