@@ -224,6 +224,68 @@ body
 				height: 35px
 			p
 				font-size: 16px
+	.main-table-mobile, .task-table-mobile
+		display: none
+		padding: 0 20px
+		margin: 10px auto
+		text-align: center
+		.vacancy
+			position: relative
+			width: 100%
+			padding-top: 10px
+			padding-bottom: 36px
+			margin-bottom: 10px
+			background-color: rgba($accent, .1)
+			border: 1px solid #000
+			border-radius: 20px
+			overflow: hidden
+			&:last-child
+				margin-bottom: 0
+			&-more
+				display: flex
+				background-color: rgba($accent, .5)
+				justify-content: center
+				align-items: center
+				position: absolute
+				padding: 5px 0
+				bottom: 0
+				right: 0
+				left: 0
+				font-size: 14px
+				cursor: pointer
+				transition: background-color .3s ease
+				&:after
+					content: "\f107"
+					font-family: Fontawesome
+					font-size: 16px
+					position: relative
+					right: -5px
+				&:hover
+					background-color: rgba($accent, .7)
+			&-more.active
+				&:after
+					content: "\f107"
+					font-family: Fontawesome
+					transform: rotate(180deg)
+			&-other
+				display: none
+			h1
+				margin: 0
+			.label
+				display: block
+				background-color: rgba($accent, .3)
+			.description
+				display: block
+				padding: 3px 0
+			.vacancy-free
+				.description
+					background-color: rgba(#9FEE00, .8)
+					color: #000
+			.close
+				.description
+					background-color: rgba(#FF5640, .8)
+					color: #fff
+
 	.main-table, .task-table
 		margin-bottom: 10px
 		table
@@ -284,6 +346,9 @@ body
 				content: ""
 				background-color: #FF0000
 				border: 2px solid #A60000
+	.task-table-mobile
+		.vacancy
+			padding-bottom: 10px
 	.task-footer
 		position: relative
 		margin-top: 20px
@@ -449,7 +514,7 @@ body
 			line-height: 40px
 			border: 1px solid #000
 		input
-			top: 5px
+			top: 4px
 			left: -4px
 			font-size: 24px
 		img
@@ -650,6 +715,10 @@ body
 					left: -50px
 					top: -20px
 					font-size: 42px
+		.sub-end
+			background-color: rgba(#d8d8d8, .6)
+			border-top: 1px solid #d8d8d8
+			border-bottom: 1px solid #d8d8d8
 		.menu-wrapper
 			a
 				display: block
@@ -660,6 +729,93 @@ body
 					border: none
 				&:hover
 					text-decoration: none
+		.city
+			background-color: rgba(#d8d8d8, .1)
+			border-top: 1px solid #d8d8d8
+			border-bottom: 1px solid #d8d8d8
+			#city
+				display: block
+				height: inherit
+				width: 100%
+				padding: 10px 0
+				&:before
+					content: "\f0ac"
+					font-family: Fontawesome
+					position: relative
+					left: -5px
+					top: 1px
+					font-size: 18px
+			.cities
+				display: none
+				position: absolute
+				top: 0
+				left: 0
+				right: 0
+				bottom: 0
+				width: 90%
+				height: 80%
+				margin: 0 auto
+				margin-top: 20px
+				background-color: $accent
+				overflow-y: scroll
+				.wrapper
+					position: relative
+					padding: 20px 0
+					#close
+						content: "X"
+						position: absolute
+						font-size: 20px
+						right: 15px
+						top: 3px
+						display: inline-block
+						cursor: pointer
+					.cities-head
+						font-size: 18px
+						font-weight: 500
+						margin-bottom: 10px
+						display: block
+					a
+						display: block
+						margin-bottom: 10px
+						color: #7972D8
+						border-bottom: 1px dotted #fff
+					a:last-child
+						margin-bottom: 0
+			.cities.active
+				display: block
+				z-index: 1000
+		.contacts
+			a
+				display: block
+				width: 100%
+				height: inherit
+				padding: 10px 0
+				color: #000
+				position: relative
+				&:first-child
+					border-bottom: 1px solid #d8d8d8
+				&:first-child:before, &:last-child:before
+					position: relative
+					font-family: "Fontawesome"
+				&:first-child
+					&:before
+						left: -5px
+						content: "\f095"
+				&:last-child
+					&:before
+						left: -5px
+						content: "\f0e0"
+		.logout
+			display: block
+			width: 100%
+			height: 50px
+			line-height: 30px
+			padding: 10px 0
+			background-color: rgba(#d8d8d8, .6)
+			color: #000
+			font-size: 14px
+			border-top: 1px solid #d8d8d8
+			border-bottom: 1px solid #d8d8d8
 .hamburger-menu.active
 	left: 0
 
@@ -668,6 +824,5 @@ body
 		.col-md-12
 			input
 				top: 5px
-
 
 @import "media" // Всегда в конце

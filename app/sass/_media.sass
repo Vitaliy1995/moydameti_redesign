@@ -9,6 +9,10 @@
     font-size: 14px
     &-right
       right: 0
+
+  .main .main-table, .main .task-table, .task .main-table, .task .task-table
+    font-size: 12px
+
   .main
     .main-table
       .address
@@ -17,22 +21,6 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
-  .header
-    height: 90px
-    &-menu
-      height: 45px
-    &-right
-      position: relative
-      height: 45px
-
-  .main, .task
-    .content-logo
-      img
-        width: 100%
-
-
-/* Small Devices, Tablets */
-@media only screen and (max-width : 768px)
   .header
     height: 45px
     &-menu, &-right
@@ -44,9 +32,108 @@
   .hamburger-menu
     display: block
 
+  .accommodation
+    .col-md-6:first-child
+      margin-bottom: 10px
+
+  .main, .task
+    .content-logo
+      img
+        width: 100%
+
+  .main-user
+    .payment-block
+      margin-top: 20px
+      padding-bottom: 20px
+
   .main
     .main-table
       display: none
+    .main-table-mobile
+      display: block
+
+  .task
+    .task-table
+      display: none
+    .task-table-mobile
+      display: block
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+
+  .accommodation a.auth-button, .registration a.auth-button
+    position: relative
+    display: block
+    margin: 0 auto
+    margin-bottom: 5px
+    text-align: center
+
+  .accommodation input, .accommodation label, .accommodation select
+    width: 90%
+    margin: 0 auto
+    border-radius: 5px
+
+  .accommodation input, .accommodation select
+    display: block
+    border-top-left-radius: 0
+    border-top-right-radius: 0
+    background-color: #fff
+    overflow: hidden
+
+  .accommodation .col-md-6 label, .registration .col-md-6 label
+    border-right: 1px solid #000
+    border-bottom: 0
+    border-bottom-left-radius: 0
+    border-bottom-right-radius: 0
+
+  .accommodation .col-md-12 img, .registration .col-md-12 img,
+  .accommodation .col-md-12 input, .registration .col-md-12 input
+    position: static
+    display: block
+    margin: 0 auto
+    width: 90%
+    border-radius: 5px
+
+  .accommodation .col-md-12 img, .registration .col-md-12 img
+    width: auto
+    border: 1px solid #000
+    margin-bottom: 10px
+
+  .main-user .user-body .row
+    padding: 0
+
+  .main-user .user-input .label, .main-user .user-input label,
+  .main-user .user-input .input, .main-user .user-input input, .main-user .user-input select
+    width: 90%
+    display: block
+    margin: 0 auto
+    border-radius: 5px
+
+  .main-user .user-input .label, .main-user .user-input label
+    border-right: 1px solid #000
+    border-bottom: 0
+    border-bottom-right-radius: 0
+    border-bottom-left-radius: 0
+
+  .main-user .user-input .input, .main-user .user-input input, .main-user .user-input select
+    border-top-right-radius: 0
+    border-top-left-radius: 0
+
+  .main-user .footer-buttons a:first-child,
+  .main-user .footer-buttons a:last-child
+    display: block
+    margin: 0 auto
+    position: relative
+
+  .main-user .footer-buttons a:first-child
+    margin-bottom: 5px
+
+  .main-user .footer-buttons
+    padding-bottom: 10px
+
+  .main-user .payment-block .header-payment
+    margin-bottom: 10px
 
   .footer
     text-align: center
@@ -81,6 +168,32 @@
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
+  .auth-main .auth-block, .auth-main .task-block, .task-main .auth-block, .task-main .task-block
+      width: 100%
+
+  .registration input, .registration label, .registration select
+    width: 100%
+    border-radius: 5px
+
+  .registration input, .registration select
+    display: block
+    border-top-left-radius: 0
+    border-top-right-radius: 0
+    background-color: #fff
+
+  .registration label
+    border-bottom-left-radius: 0
+    border-bottom-right-radius: 0
+
+  .task .task-footer
+    padding-bottom: 20px
+
+  .task .task-footer .b-right, .task .task-footer .b-left
+    position: relative
+    display: block
+    margin: 0 auto
+    margin-bottom: 5px
+
   .footer
     font-size: 12px
 
