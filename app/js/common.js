@@ -16,6 +16,13 @@ $(function() {
 
     $('#graph-work').mask('99/99');
 
+    // password remember helper
+    $('#input-email span').on("click", function () {
+       setTimeout(function () {
+           $('.password-remember-helper').css("display", "none").fadeOut(1000);
+       }, 5000);
+    });
+
     // Блок подсказка для страницы вспомнить пароль
     $('#input-email span').on('mouseover', function () {
         $('#input-email div').css("display", "block").fadeIn(300);
