@@ -14,7 +14,7 @@ $(function() {
         $('.user-right').css("height", $('.user-left').height());
     }
 
-    $('#graph-work').mask('99/99');
+    $('#graph-work').mask('9/9');
 
     // password remember helper
     $('#input-email span').on("click", function () {

@@ -79,17 +79,17 @@
             <p class="accommodation-header">Заполните форму</p>
             <form method="post">
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-6 accommodation-left">
                         <div class="accommodation-input row">
                             <label class="col-sm-6" for="contact-face">Контактное лицо*</label>
-                            <input class="col-sm-6" id="contact-face" type="text" placeholder="Контактное лицо" required>
+                            <input class="col-sm-6" id="contact-face" type="text" placeholder="Контактное лицо" maxlength="12" required>
                         </div>
                         <div class="accommodation-input row">
                             <label class="col-sm-6" for="vacancy-input">Вакансия*</label>
                             <select class="col-sm-6" name="vacancy" id="vacancy-input" required>
                                 <option disabled>Выберите вакансию</option>
-                                <option>Дворник</option>
                                 <option>Уборщица</option>
+                                <option>Дворник</option>
                             </select>
                         </div>
                         <div class="accommodation-input row">
@@ -113,7 +113,7 @@
                         </div>
                         <div class="accommodation-input row">
                             <label class="col-sm-6" for="square">Площадь (кв.м.)*</label>
-                            <input class="col-sm-6" id="square" type="number" placeholder="Площадь (кв.м.)" required>
+                            <input class="col-sm-6" id="square" type="number" placeholder="Площадь (кв.м.)" maxlength="4" required>
                         </div>
                         <div class="accommodation-input row">
                             <label class="col-sm-6" for="metro-station">Станция метро</label>
@@ -139,7 +139,7 @@
                             <input class="col-sm-6" id="address" type="text" placeholder="Адрес" required>
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-6 accommodation-right">
                         <div class="accommodation-input row" id="employment-div">
                             <label class="col-sm-6" for="employment">Занятость*</label>
                             <select class="col-sm-6" name="employment" id="employment" required>
@@ -150,7 +150,7 @@
                         </div>
                         <div class="accommodation-input row" id="graph-div">
                             <label for="graph-work" class="col-sm-6">График (раб./вых.)*</label>
-                            <input id="graph-work" type="text" class="col-sm-6" placeholder="__/__">
+                            <input id="graph-work" type="text" class="col-sm-6" placeholder="_/_">
                         </div>
                         <div class="accommodation-input row" id="date-div">
                             <label for="date" class="col-sm-6">Дата*</label>
@@ -184,8 +184,10 @@
                         Нажимая кнопку «Разместить вакансию», я подтверждаю своё согласие с <a href="">политикой конфиденциальности</a> и условиями
                         <a href="">пользовательского соглашения</a> данного сайта
                     </p>
-                    <a class="auth-button" href="">Порядок заполнения</a>
-                    <button class="auth-button button-accent">Разместить вакансию</button>
+                    <div style="position: relative;">
+                        <a class="auth-button" href="">Порядок заполнения</a>
+                        <button class="auth-button button-accent">Разместить вакансию</button>
+                    </div>
                 </div>
             </form>
         </div>
