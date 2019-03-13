@@ -35,11 +35,19 @@
   .accommodation
     .col-md-6:first-child
       margin-bottom: 10px
+    &-left
+        padding-left: 15px
+    &-right
+        padding-right: 15px
+    &-text
+        padding-left: 15px
 
   .main, .task
     .content-logo
       img
         width: 100%
+        padding: 0 5px
+        margin: 5px 0
 
   .main-user
     .payment-block
@@ -87,6 +95,8 @@
     border-bottom-left-radius: 0
     border-bottom-right-radius: 0
 
+  .accommodation .col-md-12 .accommodation-input
+    display: block
   .accommodation .col-md-12 img, .registration .col-md-12 img,
   .accommodation .col-md-12 input, .registration .col-md-12 input
     position: static
@@ -100,12 +110,20 @@
     border: 1px solid #000
     margin-bottom: 10px
 
+  .accommodation
+    .split
+      border-right: 1px solid #000
+      border-bottom-left-radius: 0
+      border-bottom: 0
+    &-text
+      padding-left: 42px
+
   .main-user .user-body .row
     padding: 0
 
   .main-user .user-input .label, .main-user .user-input label,
   .main-user .user-input .input, .main-user .user-input input, .main-user .user-input select
-    width: 90%
+    width: 100%
     display: block
     margin: 0 auto
     border-radius: 5px
@@ -207,7 +225,9 @@
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
-	/**/
+	.accommodation
+        &-text
+            padding-left: 30px
 
 
 /*==========  Mobile First  ==========*/

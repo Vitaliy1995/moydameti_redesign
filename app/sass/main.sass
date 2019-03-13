@@ -34,6 +34,8 @@ body
 	border: 1px solid #000
 	border-radius: 15px
 	background-color: rgba(#fff, .7)
+	outline: none
+	z-index: 1000
 	transition: background-color .25s ease
 	&:hover
 		color: #000
@@ -225,7 +227,7 @@ body
 				font-size: 16px
 	.main-table-mobile, .task-table-mobile
 		display: none
-		padding: 0 20px
+		padding: 0 5px
 		margin: 10px auto
 		text-align: center
 		.vacancy
@@ -268,8 +270,9 @@ body
 					transform: rotate(180deg)
 			&-other
 				display: none
-			h1
-				margin: 0
+			h2
+				margin: 5px
+				font-weight: 500
 			.label
 				display: block
 				background-color: rgba($accent, .3)
@@ -280,6 +283,12 @@ body
 				.description
 					background-color: rgba(#9FEE00, .8)
 					color: #000
+					display: block
+					width: 100%
+					border: none
+			.vacancy-address
+				.description
+					padding: 0 5px
 			.close
 				.description
 					background-color: rgba(#FF5640, .8)
@@ -540,6 +549,30 @@ body
 			transition: color .25s ease
 			&:hover
 				color: #333333
+	&-time-add-desktop
+		position: relative
+		span
+			display: none
+			position: absolute
+			top: -14px
+			right: -20px
+			font-size: 32px
+			line-height: 18px
+			cursor: pointer
+			overflow: hidden
+	&-time-add-mobile
+		span
+			display: none
+			margin-bottom: 10px
+	.split, #work-time-start_add, #work-time-end_add
+		width: 24.5%
+		text-align: center
+	.split
+		border-bottom-right-radius: 0
+		border-top-right-radius: 0
+		border-right: 0
+	#work-time-start_add, #work-time-end_add
+		display: none
 	a.auth-button
 		position: absolute
 		left: 0
@@ -822,6 +855,8 @@ body
 					&:before
 						left: -5px
 						content: "\f0e0"
+				&:hover
+					text-decoration: none
 		.logout
 			display: block
 			width: 100%
@@ -833,6 +868,20 @@ body
 			font-size: 14px
 			border-top: 1px solid #d8d8d8
 			border-bottom: 1px solid #d8d8d8
+		.politics
+			background-color: rgba(#d8d8d8, .1)
+			a
+				display: block
+				width: 100%
+				height: inherit
+				padding: 10px 0
+				color: #000
+				position: relative
+				&:first-child
+					border-top: 1px solid #d8d8d8
+					border-bottom: 1px solid #d8d8d8
+				&:hover
+					text-decoration: none
 .hamburger-menu.active
 	left: 0
 

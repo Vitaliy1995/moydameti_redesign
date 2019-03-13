@@ -1,20 +1,47 @@
 $(function() {
 
-    window.onload = function () {
-        // Ширина input time на мобильных устройствах
-        if ($(this).width() < 768) {
-            var wdth = $('.accommodation select').outerWidth();
-            $(".accommodation input[type='time']").css("width", wdth);
-        }
-    };
+    // Кнопки добавления доп. времени работы
+    if ($(this).width() < 768) {
+        $('#add-time-desktop span').css("display", "none");
+    } else {
+        $('#add-time-mobile span').css("display", "none");
+    }
 
+    // Ширина input time на мобильных устройствах
+    if ($(this).width() < 768) {
+        var wdth = $('.accommodation select').outerWidth();
+        $(".accommodation input[type='time']").css("width", wdth);
+    }
+
+    // Занятость
     employmentGetInput();
 
+    // Личный кабинет
     if ($(this).width() >= 992) {
         $('.user-right').css("height", $('.user-left').height());
     }
 
+    // График раб./вых.
     $('#graph-work').mask('9/9');
+
+    // Вывод кнопки добавления время работы
+    $('#work-time-start, #work-time-end').on("change", function () {
+        var startTime = $('#work-time-start').val();
+        var endTime = $('#work-time-end').val();
+        if (startTime && endTime) {
+            if ($(window).width() >= 768) {
+                $('#add-time-desktop span').css("display", "block");
+            } else {
+                $('#add-time-mobile span').css("display", "inline-block");
+            }
+        }
+    });
+
+    // Добавление время работы
+    $('#add-time-desktop span, #add-time-mobile span').on("click", function () {
+        $('#work-time-start, #work-time-end').removeClass("col-sm-6").addClass("col-sm-3").addClass("split");
+        $('#work-time-start_add, #work-time-end_add').css("display", "block");
+    });
 
     // password remember helper
     $('#input-email span').on("click", function () {
@@ -83,5 +110,9 @@ function employmentGetInput() {
     } else if (employment === "Разовая") {
         $('#date-div').css("display", "block").fadeIn(300);
         $('#graph-div').css("display", "none").fadeOut(300);
+
+        // Установим ширину на весь экран
+        var wdth = $('.accommodation select').outerWidth();
+        $(".accommodation input[type='date']").css("width", wdth);
     }
 }
