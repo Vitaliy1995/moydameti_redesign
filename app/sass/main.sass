@@ -280,12 +280,24 @@ body
 				display: block
 				padding: 3px 0
 			.vacancy-free
+				.border-button
+					padding: 5px
+					//background-color: $accent
 				.description
 					background-color: rgba(#9FEE00, .8)
 					color: #000
 					display: block
 					width: 100%
-					border: none
+					border: 2px solid #9FEE00
+				.touch-icon
+					display: inline-block
+					width: 14px
+					height: 14px
+					transform: rotate(180deg)
+					background: url(../img/icons/touch.svg) 100% 100% no-repeat
+					font-size: 14px
+					position: relative
+					top: 3px
 			.vacancy-address
 				.description
 					padding: 0 5px
@@ -293,6 +305,7 @@ body
 				.description
 					background-color: rgba(#FF5640, .8)
 					color: #fff
+					border: 2px solid #FF5640
 
 	.main-table, .task-table
 		margin-bottom: 10px
