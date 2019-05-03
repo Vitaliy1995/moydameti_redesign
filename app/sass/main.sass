@@ -134,15 +134,27 @@ img
 			a
 				&:last-child
 					margin-right: 0
-	.mobile-logo
-		display: none
-		width: 130px
-		height: 45px
-		position: relative
-		left: 35px
-		svg
-			width: 130px
-			height: inherit
+	.mobile
+		&-social
+			display: none
+			height: 100%
+			justify-content: flex-end
+			align-items: center
+		&-ok, &-vk, &-inst
+			width: 25px
+			height: 25px
+			margin-left: 20px
+			background-color: $accent
+			background-repeat: no-repeat
+			background-position: center
+			background-size: contain
+			font-weight: 400
+		&-ok
+			background-image: url("../img/social/ok.svg")
+		&-vk
+			background-image: url("../img/social/vk.svg")
+		&-inst
+			background-image: url("../img/social/inst.svg")
 	&-right
 		position: absolute
 		height: inherit
@@ -227,9 +239,6 @@ img
 		&-sm
 			margin-top: 20px
 			text-align: center
-			img
-				width: 235px
-				height: 35px
 			p
 				font-size: 16px
 	.main-table-mobile, .task-table-mobile
@@ -651,7 +660,9 @@ img
 				border-top-right-radius: 10px
 				text-align: left
 				background-color: #fff
-				padding-left: 10px
+				padding-left: 15px
+			select
+				padding-left: 11px
 	.footer-buttons
 		margin-top: 30px
 		padding-bottom: 30px
