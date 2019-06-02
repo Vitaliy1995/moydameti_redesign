@@ -18,6 +18,9 @@ body
 img
 	width: 100%
 
+input, select
+	outline: none
+
 // Общие классы
 .text-center
 	text-align: center
@@ -556,7 +559,7 @@ img
 			border: 1px solid #000
 		input
 			position: static
-			font-size: 24px
+			font-size: 14px
 		img
 			position: relative
 			border-right: none
@@ -716,6 +719,27 @@ img
 		display: inline-block
 		height: inherit
 		line-height: 70px
+	&-socials
+		position: absolute
+		left: 50%
+		top: 21px
+		a
+			width: 28px
+			height: 28px
+			display: inline-block
+			margin-right: 15px
+
+			color: #262626
+			background-size: 28px
+			background-repeat: no-repeat
+		a:last-child
+			margin-right: 0
+		a.social-vk
+			background-image: url("../img/social/vk.svg")
+		a.social-inst
+			background-image: url("../img/social/inst.svg")
+		a.social-ok
+			background-image: url("../img/social/ok.svg")
 	&-contacts
 		position: absolute
 		right: 15px
@@ -902,6 +926,8 @@ img
 			font-size: 14px
 			border-top: 1px solid #d8d8d8
 			border-bottom: 1px solid #d8d8d8
+			&:hover
+				text-decoration: none
 		.politics
 			background-color: rgba(#d8d8d8, .1)
 			a
