@@ -12,11 +12,14 @@ body
 	min-width: 320px
 	position: relative
 	line-height: 1.65
-	font-family: $default-font !important
+	//font-family: $default-font !important
 	overflow-x: hidden
 
 img
 	width: 100%
+
+input, select, textarea
+	background-color: #fff
 
 // Общие классы
 .text-center
@@ -150,11 +153,11 @@ img
 			background-size: contain
 			font-weight: 400
 		&-ok
-			background-image: url("../img/social/ok.svg")
+			background-image: url("/assets/theme/custom/images/social/ok.svg")
 		&-vk
-			background-image: url("../img/social/vk.svg")
+			background-image: url("/assets/theme/custom/images/social/vk.svg")
 		&-inst
-			background-image: url("../img/social/inst.svg")
+			background-image: url("/assets/theme/custom/images/social/inst.svg")
 	&-right
 		position: absolute
 		height: inherit
@@ -310,7 +313,7 @@ img
 					width: 14px
 					height: 14px
 					transform: rotate(180deg)
-					background: url(../img/icons/touch.svg) 100% 100% no-repeat
+					background: url(/assets/theme/custom/images/icons/touch.svg) 100% 100% no-repeat
 					font-size: 14px
 					position: relative
 					top: 3px
@@ -918,5 +921,15 @@ img
 					text-decoration: none
 .hamburger-menu.active
 	left: 0
+
+// Карты
+#map-dialog
+	#map
+		position: absolute
+		left: 0
+		top: 0
+		max-width: 496px
+		max-height: 346px
+		overflow: hidden
 
 @import "media" // Всегда в конце

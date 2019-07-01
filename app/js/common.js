@@ -22,7 +22,7 @@ $(function() {
     }
 
     // График раб./вых.
-    $('#graph-work').mask('9/9');
+    //$('#graph-work').mask('9/9');
 
     // Вывод кнопки добавления время работы
     $('#work-time-start, #work-time-end').on("change", function () {
