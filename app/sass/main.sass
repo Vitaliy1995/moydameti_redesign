@@ -12,7 +12,7 @@ body
 	min-width: 320px
 	position: relative
 	line-height: 1.65
-	//font-family: $default-font !important
+	font-family: $default-font !important
 	overflow-x: hidden
 
 img
@@ -20,6 +20,7 @@ img
 
 input, select, textarea
 	background-color: #fff
+    outline: none
 
 // Общие классы
 .text-center
@@ -719,6 +720,27 @@ input, select, textarea
 		display: inline-block
 		height: inherit
 		line-height: 70px
+	&-socials
+		position: absolute
+		left: 50%
+		top: 21px
+		a
+			width: 28px
+			height: 28px
+			display: inline-block
+			margin-right: 15px
+
+			color: #262626
+			background-size: 28px
+			background-repeat: no-repeat
+		a:last-child
+			margin-right: 0
+		a.social-vk
+			background-image: url("/assets/theme/custom/images/social/vk.svg")
+		a.social-inst
+			background-image: url("/assets/theme/custom/images/social/inst.svg")
+		a.social-ok
+			background-image: url("/assets/theme/custom/images/social/ok.svg")
 	&-contacts
 		position: absolute
 		right: 15px
@@ -905,6 +927,8 @@ input, select, textarea
 			font-size: 14px
 			border-top: 1px solid #d8d8d8
 			border-bottom: 1px solid #d8d8d8
+			&:hover
+				text-decoration: none
 		.politics
 			background-color: rgba(#d8d8d8, .1)
 			a

@@ -66,7 +66,7 @@ $(function() {
 
     $('#ham8').on("click", function () {
         $(".hamburger-menu").toggleClass('active');
-        $(".main").toggle("overflow");
+        $(".main, .auth-main, .main-user").toggle("overflow");
         $(".footer").toggle("overflow");
     });
 
